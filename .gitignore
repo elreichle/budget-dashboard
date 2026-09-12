@@ -1,0 +1,27 @@
+# --- NEVER commit personal data or secrets ---
+# Everything personal lives in data/ (plan, rules, secrets, sqlite db). Only *.example.* is tracked.
+data/*
+!data/.gitkeep
+!data/*.example.json
+.env
+.env.*
+!.env.example
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.csv
+*.ofx
+*.qfx
+*.xlsx
+
+# build / deps
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# local agent workflow state
+.devloop/

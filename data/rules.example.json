@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "rules": [
+    { "match": "GROCERY MART", "bucket": "meals" },
+    { "match": "MEAL KIT CO", "bucket": "meals" },
+    { "match": "BUS FARE", "bucket": "transit" },
+    { "match": "GIFT SHOP", "bucket": "gifts" },
+    { "match": "ONLINE SHOP", "bucket": "fun-money" },
+    { "match": "STREAMING SERVICE", "bucket": "streaming" },
+    { "match": "FITNESS CLUB", "bucket": "gym" },
+    { "match": "MUSIC SCHOOL", "bucket": "lessons" },
+    { "match": "POWER COMPANY", "bucket": "power" },
+    { "match": "RENT PAYMENT", "bucket": "rent" },
+    { "match": "CARD A PAYMENT", "bucket": "_transfer", "notes": "card payments and savings moves never count as spending" },
+    { "match": "PAYMENT THANK YOU", "bucket": "_transfer" },
+    { "match": "INTEREST CHARGE", "bucket": "_interest" },
+    { "match": "PAYROLL", "bucket": "_income" }
+  ]
+}

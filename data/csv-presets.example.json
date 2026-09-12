@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "presets": {
+    "everyday": { "template": "ally" },
+    "travel-card": { "template": "capital-one", "label": "Travel card" },
+    "credit-union": {
+      "template": "generic",
+      "label": "Credit union checking",
+      "institution": "Credit Union",
+      "date": ["Posted"],
+      "amount": { "kind": "split", "debit": ["Withdrawal"], "credit": ["Deposit"] }
+    }
+  }
+}

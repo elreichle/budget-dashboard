@@ -1,0 +1,81 @@
+{
+  "errors": [
+    "Connection to Example Card Co may need attention"
+  ],
+  "accounts": [
+    {
+      "org": {
+        "domain": "examplebank.example.com",
+        "name": "Example Bank",
+        "sfin-url": "https://bridge.example.invalid/simplefin",
+        "url": "https://examplebank.example.com",
+        "id": "org-bank"
+      },
+      "id": "ACT-CHK-1",
+      "name": "Everyday Checking",
+      "currency": "USD",
+      "balance": "1250.75",
+      "available-balance": "1200.00",
+      "balance-date": 1757082600,
+      "transactions": [
+        {
+          "id": "TXN-1001",
+          "posted": 1756771200,
+          "amount": "-48.75",
+          "description": "GROCERY MART #12",
+          "payee": "Grocery Mart",
+          "memo": ""
+        },
+        {
+          "id": "TXN-1002",
+          "posted": 1756684800,
+          "amount": "2000.00",
+          "description": "PAYROLL DEPOSIT"
+        },
+        {
+          "id": "TXN-1003",
+          "posted": 0,
+          "amount": "-4.50",
+          "description": "COFFEE SPOT",
+          "transacted_at": 1757063700,
+          "pending": true
+        },
+        {
+          "id": "TXN-1004",
+          "posted": 0,
+          "amount": "-9.99",
+          "description": "",
+          "payee": "Streaming Service",
+          "pending": true
+        }
+      ],
+      "holdings": []
+    },
+    {
+      "org": {
+        "domain": "cardco.example.com",
+        "name": "Example Card Co",
+        "sfin-url": "https://bridge.example.invalid/simplefin"
+      },
+      "id": "ACT-CARD-1",
+      "name": "Rewards Card",
+      "currency": "USD",
+      "balance": "-830.10",
+      "balance-date": 1757082660,
+      "transactions": [
+        {
+          "id": "TXN-2001",
+          "posted": 1756857600,
+          "amount": "-120.00",
+          "description": "HARDWARE DEPOT"
+        },
+        {
+          "id": "TXN-2002",
+          "posted": 1756944000,
+          "amount": "300.00",
+          "description": "PAYMENT THANK YOU"
+        }
+      ]
+    }
+  ]
+}

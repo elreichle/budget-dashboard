@@ -1,0 +1,25 @@
+# Copy to docker-compose.yml, then: docker compose up -d --build
+# Your plan, rules, SimpleFIN credentials and database live in ./data on the host.
+services:
+  budget-dashboard:
+    build: .
+    image: budget-dashboard
+    restart: unless-stopped
+    # An init process as PID 1 passes `docker stop` on to Node, so it exits at once.
+    init: true
+    ports:
+      # No login: published on this machine only. To reach it from your network, drop "127.0.0.1:"
+      # and list the name or address you browse to in ALLOWED_HOSTS below.
+      - "127.0.0.1:8420:8420"
+    volumes:
+      - ./data:/data
+    environment:
+      # Minutes between automatic bank syncs; 0 turns automatic sync off.
+      SYNC_INTERVAL_MINUTES: "60"
+      # Hostnames the API answers to besides localhost, comma-separated.
+      # ALLOWED_HOSTS: "budget.lan"
+      # Timezone for days and months ("today", the current month); containers run in UTC otherwise.
+      # TZ: "Europe/Berlin"
+    # The image runs as uid 1000. If ./data belongs to another user, run as that user instead
+    # (`id -u` / `id -g`):
+    # user: "1000:1000"

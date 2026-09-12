@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "currency": "USD",
+  "planStartMonth": "2026-01",
+  "income": { "netMonthly": 4000, "paychecksPerMonth": 1, "notes": "Take-home pay per month" },
+  "buckets": [
+    { "id": "rent", "name": "Rent", "group": "fixed", "planned": 1200, "baseline": 1200, "notes": "Apartment" },
+    { "id": "power", "name": "Electricity", "group": "fixed", "planned": 200, "baseline": 220 },
+    { "id": "gym", "name": "Gym", "group": "fixed", "planned": 30, "baseline": 30 },
+    { "id": "lessons", "name": "Music lessons", "group": "fixed", "planned": 120, "baseline": 120 },
+    { "id": "meals", "name": "Meals", "group": "living", "planned": 500, "baseline": 550, "notes": "Dining out" },
+    { "id": "streaming", "name": "Streaming", "group": "living", "planned": 60, "baseline": 70 },
+    { "id": "fun-money", "name": "Fun money", "group": "living", "planned": 150, "baseline": 200 },
+    { "id": "transit", "name": "Transit pass", "group": "living", "planned": 80, "baseline": 85 },
+    { "id": "hobbies", "name": "Hobbies", "group": "living", "planned": 50, "baseline": 50 },
+    { "id": "gifts", "name": "Gifts", "group": "living", "planned": 40, "baseline": 40 }
+  ],
+  "savingsGoals": [
+    {
+      "id": "irregular-costs",
+      "name": "Irregular costs fund",
+      "monthly": 300,
+      "baselineMonthly": 100,
+      "targetBalance": null,
+      "notes": "Sinking fund for costs that do not come every month",
+      "items": [
+        { "name": "Holiday travel", "perBill": 1000, "timesPerYear": 1, "nextDue": "2026-12-15" },
+        { "name": "Bike repair", "perBill": 60, "timesPerYear": 4, "nextDue": "2026-07-01" }
+      ]
+    },
+    { "id": "rainy-day", "name": "Rainy day fund", "monthly": 100, "baselineMonthly": 0, "targetBalance": 1000, "items": [] }
+  ],
+  "debts": [
+    {
+      "id": "card-a",
+      "name": "Card A",
+      "asOf": "2025-12-31",
+      "creditLimit": 5000,
+      "plannedPayment": 600,
+      "baselinePayment": 350,
+      "notes": "Travel rewards",
+      "segments": [
+        { "name": "Purchases", "balance": 1500, "apr": 0.31 },
+        { "name": "Cash advances", "balance": 2000, "apr": 0.33 }
+      ]
+    },
+    {
+      "id": "card-b",
+      "name": "Card B",
+      "asOf": "2025-12-31",
+      "creditLimit": 10000,
+      "plannedPayment": 200,
+      "baselinePayment": 200,
+      "segments": [{ "name": "Purchases", "balance": 8000, "apr": 0.14 }]
+    },
+    {
+      "id": "card-c",
+      "name": "Card C",
+      "asOf": "2025-12-31",
+      "creditLimit": 2000,
+      "plannedPayment": 50,
+      "baselinePayment": 50,
+      "segments": [{ "name": "Purchases", "balance": 600, "apr": 0.09 }]
+    }
+  ],
+  "payoffStrategy": { "order": ["card-a", "card-b", "card-c"], "totalMonthly": 850, "rollover": true },
+  "subscriptions": [
+    { "name": "Streaming service", "monthly": 15, "status": "keep" },
+    { "name": "Cloud storage", "monthly": 10, "status": "keep" },
+    { "name": "Language app", "monthly": 14, "status": "watch" },
+    { "name": "Puzzle app", "monthly": 12, "status": "keep" }
+  ]
+}

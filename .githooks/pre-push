@@ -1,0 +1,10 @@
+#!/bin/sh
+# Refuse pushes while a pushed commit carries personal data: a push publishes every past file version,
+# commit message and author email reachable from it, not just the current tree. Enabled by
+# `npm run prepare` (core.hooksPath = .githooks). Never bypass with --no-verify; start a fresh history.
+revs=""
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$local_sha" in *[!0]*) revs="$revs $local_sha" ;; esac # all zeros: a branch deletion
+done
+[ -z "$revs" ] && exit 0
+exec node scripts/pii-guard.mjs --history $revs

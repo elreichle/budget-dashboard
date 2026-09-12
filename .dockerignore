@@ -1,0 +1,23 @@
+# Keep personal data, secrets and host build output out of the Docker build context.
+# The container reads data from a mounted /data volume and settings from its environment.
+data
+.env
+.env.*
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.csv
+*.ofx
+*.qfx
+*.xlsx
+
+node_modules
+dist
+coverage
+.git
+.devloop
+*.log
+.DS_Store
+docker-compose.yml

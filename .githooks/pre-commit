@@ -1,0 +1,4 @@
+#!/bin/sh
+# Refuse commits that stage personal data or secrets. Enabled by `npm run prepare`
+# (core.hooksPath = .githooks). Never bypass with --no-verify; fix the data instead.
+exec node scripts/pii-guard.mjs --staged
